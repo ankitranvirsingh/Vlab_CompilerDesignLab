@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identifier Check</title>
+    <style>
+        #xyz {
+             margin-left: 400px;;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        #xyz:hover {
+            cursor: pointer;
+            color: blue;
+            border-color: aqua;
+            font-size: medium;
+        }
+    </style>
+</head>
+<body>
+    <button class="item btn" id="open-ass2">Valid Identifiers</button>
+                <div class="modal-container" id="modal-container-2">
+                    <div class="modal">
+                        <p class="title">Valid Identifiers</p>
+                        <p class="description">Check if a given string is identifier or not</p>
+                        <br>
+                        <br>
+                        <input type="text" placeholder=" Enter text" class="modal-input-output" id="modal-input-ass2">
+                        <button type="button" class="modal-run" id="modal-run-ass2" onclick="isValid()">Run</button>
+                        <br>
+                        <br>
+                        <input type="text" placeholder=" Output" class="modal-input-output" id="modal-output-ass2"
+                            readonly>
+                        <br>
+                        <br>
+                        <button id="close-2" class="modal-button" onclick="ClearFields()">Done</button>
+                    </div>
+                </div>
+                <script src="../validateIdentifiers.js"></script>
+                <a href="../index.html"><button id="xyz">Home Page</button></a>
+</body>
+</html>

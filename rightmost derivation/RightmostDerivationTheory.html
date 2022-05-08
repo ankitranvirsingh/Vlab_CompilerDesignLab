@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+  margin:0;
+  padding: 0;
+  width: 200px;
+  background-color: #eaecf1;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+ 
+.sidebar a.active {
+  background-color: #5325be;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+</style>
+</head>
+<body>
+<div class="sidebar">
+  
+  <a class="active" href="Rightmost Derivation.html">Aim</a>
+  <a href="RightmostDerivationTheory.html">Theory</a>
+  <a href="simulation4.html">Simulation</a>
+</div>
+
+<div class="content">
+ 
+  <h1 style="text-align:center;">RIGHTMOST DERIVATION</h1>
+  <h2>Theory</h2>
+<pre style="font-size: 15px;">
+  <h2> Rightmost Derivation</h2>
+  In rightmost derivation, the input is scanned and replaced with the production rule from right to left. So in <br>  rightmost derivation, we read the input string from right to left.
+
+
+  <h4> Example:</h4>
+  <h4>Production rules:</h4> 
+  E = E + E  
+  E = E - E  
+  E = a | b 
+  <h4>Input</h4>
+  a - b + a  
+  <h4>The Rightmostmost derivation is:</h4> 
+  E = E - E  
+  E = E - E + E  
+  E = E - E + a  
+  E = E - b + a  
+  E = a - b + a  
+</pre>
+
+
+</div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+  margin:0;
+  padding: 0;
+  width: 200px;
+  background-color: #eaecf1;
+  position: fixed;
+  height: 100%;
+  overflow: auto; 
+}
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: red;
+   color: white;
+   text-align: center;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+ 
+.sidebar a.active {
+  background-color: #5325be;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+</style>
+</head>
+<body>
+<div class="sidebar">
+  
+  <a class="active" href="Lexicalanlyzer.html">Aim</a>
+  <a href="Lexicaltheory.html">Theory</a>
+  <a href="Lexicalsimulation.html">Simulation</a>
+  
+  
+</div>
+
+<div class="content">
+  
+  <h1 style="text-align:center;">LEXICAL ANALYZER</h1><br><br>
+  
+  <h2>Theory</h2><br><br>
+  <p>Lexical Analysis is the very first phase in the compiler designing. A Lexer takes the modified source code which is written in the form of sentences. In other words, it helps you to convert a sequence of characters into a sequence of tokens. The lexical analyzer breaks this syntax into a series of tokens. It removes any extra space or comment written in the source code.
+  <br><br><br>
+  <strong>Tokens</strong>  <br> <br>
+Lexemes are said to be a sequence of characters (alphanumeric) in a token. There are some predefined rules for every lexeme to be identified as a valid token. These rules are defined by grammar rules, by means of a pattern. A pattern explains what can be a token, and these patterns are defined by means of regular expressions.
+
+In programming language, keywords, constants, identifiers, strings, numbers, operators and punctuations symbols can be considered as tokens.
+  </p>
+
+
+
+
+</div>
+
+
+
+</body>
+</html>

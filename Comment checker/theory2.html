@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.sidebar {
+  margin:0;
+  padding: 0;
+  width: 200px;
+  background-color: #eaecf1;
+  position: fixed;
+  height: 100%;
+  overflow: auto; 
+}
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: red;
+   color: white;
+   text-align: center;
+}
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+ 
+.sidebar a.active {
+  background-color: #5325be;
+  color: white;
+}
+
+.sidebar a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+div.content {
+  margin-left: 200px;
+  padding: 1px 16px;
+  height: 1000px;
+}
+
+@media screen and (max-width: 700px) {
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {margin-left: 0;}
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+}
+</style>
+</head>
+<body>
+<div class="sidebar">
+  
+  <a class="active" href="index2.html">Aim</a>
+  <a href="theory2.html">Theory</a>
+  <a href="simulation2.html">Simulation</a>
+  
+  
+</div>
+
+<div class="content">
+  
+  <h1 style="text-align:center;">CHECK COMMENT</h1><br><br>
+  
+  <h2>Theory</h2><br><br>
+  <p>Approach: The idea is to check whether the input string is a comment or not <br> <br> Below are the steps: <br> <br>
+
+    Check if at the first Index(i.e. index 0) the value is ‘/’ then follow below steps else print “It is not a comment”. <br>
+    If line[0] == ‘/’: <br>
+    If line[1] == ‘/’, then print “It is a single line comment”. <br>
+    If line[1] == ‘*’, then traverse the string and if any adjacent pair of ‘*’ & ‘/’ is found then print “It is a multi-line comment”. <br>
+    Otherwise, print “It is not a comment”.</p>
+
+
+
+
+</div>
+
+
+
+</body>
+</html>

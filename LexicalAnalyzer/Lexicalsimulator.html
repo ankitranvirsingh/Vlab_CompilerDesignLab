@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulator</title>
+    <style>
+        #xyz {
+             margin-left: 400px;;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        #xyz:hover {
+            cursor: pointer;
+            color: blue;
+            border-color: aqua;
+            font-size: medium;
+        }
+    </style>
+</head>
+<body>
+    <div class="card-header">Simulation -</div>
+            <div class="card-body">
+                <h5 class="card-title">Input String :</h5>
+                <br>
+                <p class="card-text">
+                    <input type="text" placeholder="Enter Text !!" id="myInput">
+                    <br>
+                    <br>
+                    <button type="button" onclick="getresult()">Submit</button></br>
+
+                </p>
+                <div id="resDiv">
+
+                <script>
+                        function getresult() {
+                            let c=0,op=0,ide=0,kyy=0,di=0;
+            var inputText = document.getElementById("myInput").value;
+            let myDiv = document.getElementById("resDiv");
+            delimiters = ['', '+', '-', '*', '/', ',', ';', '>', '<', '=', '(', ')', '[', ']', '{', '}']
+
+        const operators = ['+', '-', '/', '*', '>', '<', '=']
+        const digits = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        const keywords = ['if', 'else', 'while', 'do', 'break', 'continue', 'int', 'double', 'float', 'return', 'char', 'case', 'sizeof', 'long', 'short', 'typedef', 'switch', 'unsigned', 'void', 'static', 'struct', 'goto']
+
+function isValidOperator(string) {
+    if (operators.includes(string)) {
+        // myDiv.innerText = `${string} is a Valid Operator`;
+        console.log(`${string} IS A VALID OPERATOR`)
+        op++;
+        c++;
+        return true;
+    }
+}
+
+function isValidIdentifier(string) {
+    const firstCharacter = string[0]
+    if (!(firstCharacter >= '0' && firstCharacter) <= '9' && !delimiters.includes(firstCharacter) && string.length < 2) {
+        // myDiv.innerText = `${string} is a valid identifier`;
+        console.log(`${string} IS A VALID IDENTIFIER`)
+        c++;
+        ide++;
+        return true
+    } else {
+        // myDiv.innerText = `${string} is a not a valid identifier`;
+        console.log(`${string} IS NOT A VALID IDENTIFIER`)
+        c++;
+        ide++;
+        return false
+    }
+}
+
+function isKeyword(string) {
+    if (keywords.includes(string)) {
+        // myDiv.innerText = `${string} is a valid keyword`;
+        console.log(`${string} IS A VALID KEYWORD`)
+        c++;
+        kyy++;
+        return true
+    }
+}
+
+function isInteger(string) {
+    if (!isNaN(string)) {
+        // myDiv.innerText = `${string} is a valid integer`;
+        console.log(`${string} IS A VALID INTEGER`)
+        c++;
+        di++;
+        return true
+    }
+}
+const expression = inputText;
+const tokens = expression.split(new RegExp('([-+(),*/><={}? ;])', 'g'));
+const cleanedTokens = tokens.filter((token) => token !== ' ').filter((token) => token != '')
+
+
+cleanedTokens.forEach((token) => {
+
+    if (isValidOperator(token)) { } else if (isKeyword(token)) { } else if (isInteger(token)) { } else if (isValidIdentifier(token)) { } else { }
+})
+myDiv.innerText = `total tokens: ${c} ,\n total operators: ${op},\n total keywords: ${kyy},\n total integers: ${di},\n total identifiers: ${ide}`;
+
+        }
+        
+             </script>
+                </div>
+
+            </div>
+        </div>
+        <a href="../index.html"><button id="xyz">Home Page</button></a>
+</body>
+</html>
